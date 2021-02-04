@@ -15,7 +15,6 @@ const skills = [
   'express',
   'webpack',
   'next.js',
-  'PWA',
   'java',
   'C#',
   'graphics',
@@ -90,12 +89,16 @@ export default function Home() {
   return <>
     <Head>
       <title>gld on FrozenDev</title>
+      <meta name="description" content="gld's user page" />
+      <meta property="og:title" content="gld on FrozenDev" />
+      <meta property="og:description" content="gld's user page" />
+      <meta name="twitter:title" content="gld on FrozenDev" />
     </Head>
     <div className="wrapper jumbotron">
       <canvas width={0} height={0} />
       <div className="container">
         <h1 style={{fontWeight: 300}}>hello! i'm</h1>
-        <Image src="/img/gladgladius-logo.png" width={713} height={330} />
+        <Image unoptimized src="./img/gladgladius-logo.png" width={475} height={220} alt="gladgladius" />
         <div className="skills">
           {skill}<i className="caret" style={{visibility: caret ? 'visible' : 'hidden'}}>_</i>
         </div>
@@ -111,7 +114,7 @@ export default function Home() {
           <div style={{marginTop: 5}}>
             <a className="contact muted" href="mailto:defoverthought@gmail.com">defoverthought@gmail.com</a>
           </div>
-          <div className="muted">More coming soon!</div>
+          <div className="muted">more coming soon!</div>
         </div>
       </div>
     </div>
