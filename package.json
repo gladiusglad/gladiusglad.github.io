@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "deploy": "rmdir /s /q node_modules/.cache & next build && next export & cd out && copy nul .nojekyll > nul & cd ../ && gh-pages -d out -t true"
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
     "next": "10.0.6",
