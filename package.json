@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "rmdir /s /q node_modules/.cache && next build && next export && copy nul out/.nojekyll > nul && gh-pages -d out -t true"
   },
   "dependencies": {
     "next": "10.0.6",
@@ -13,5 +14,8 @@
     "react-dom": "17.0.1",
     "sass": "^1.32.6",
     "webgl-fluid": "0.0.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
