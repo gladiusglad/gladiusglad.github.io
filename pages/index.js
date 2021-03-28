@@ -2,24 +2,23 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
-const skills = [
-  'react',
-  'javascript',
-  'typescript',
-  'HTML',
-  'CSS/SCSS/Sass',
-  'responsive design',
-  'mongoDB',
-  'mySQL',
-  'node',
-  'express',
-  'webpack',
-  'next.js',
-  'java',
-  'C#',
-  'graphics',
-  'video editing',
-]
+const title = 'gladgladius',
+  description = 'hello! i\'m a new developer currently dabbling in react, java, and c#. learn more about me!',
+  skills = [
+    'react',
+    'javascript',
+    'html',
+    'css/scss/sass',
+    'mongoDB',
+    'mySQL',
+    'webpack',
+    'next.js',
+    'java',
+    'c#',
+    'wpf',
+    'graphics',
+    'video editing',
+  ]
 
 export default function Home() {
   let typing, skillIndex = 0, currentLength = 0
@@ -88,11 +87,11 @@ export default function Home() {
 
   return <>
     <Head>
-      <title>gld on FrozenDev</title>
-      <meta name="description" content="gld's user page" />
-      <meta property="og:title" content="gld on FrozenDev" />
-      <meta property="og:description" content="gld's user page" />
-      <meta name="twitter:title" content="gld on FrozenDev" />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:title" content={title} />
     </Head>
     <div className="wrapper jumbotron">
       <canvas width={0} height={0} />
