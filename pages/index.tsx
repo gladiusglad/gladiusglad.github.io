@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import styles from '../styles/index.module.scss'
+import Skills from '../components/skills'
 
 const title = 'gladgladius',
   description = 'hello! i\'m a new developer currently dabbling in react, java, and more. learn more about me!',
@@ -27,54 +28,8 @@ const title = 'gladgladius',
   ]
 
 export default function Home() {
-  let typing, skillIndex = 0, currentLength = 0
-  const timeouts = []
-  const [caret, setCaret] = useState(true)
-  const [skill, setSkill] = useState('')
-
-  const addTimeout = (callback, ms) => {
-    timeouts.push(setTimeout(callback, ms))
-  }
-
-  const typeSkill = () => {
-    typing = true
-    let currentSkill = skills[skillIndex]
-
-    currentLength++
-    setSkill(currentSkill.substring(0, currentLength))
-
-    if (currentLength === currentSkill.length) {
-      typing = false
-      addTimeout(deleteSkill, 2000)
-    } else {
-      addTimeout(typeSkill, Math.random() * 150 + 15)
-    }
-  }
-
-  const deleteSkill = () => {
-    typing = true
-    let currentSkill = skills[skillIndex]
-
-    currentLength--
-    setSkill(currentSkill.substring(0, currentLength))
-
-    if (currentLength === 0) {
-      typing = false
-      if (skillIndex === skills.length - 1) {
-        skillIndex = 0
-      } else {
-        skillIndex++
-      }
-      addTimeout(typeSkill, 50)
-    } else {
-      addTimeout(deleteSkill, (currentLength === currentSkill.length - 1) ? 300 : 20)
-    }
-  }
 
   useEffect(() => {
-    addTimeout(typeSkill, 1000)
-    const caretInterval = setInterval(() => setCaret((prev) => typing || !prev), 500)
-
     const fluid = async () => {
       const WebglFluid = (await import('webgl-fluid')).default
       WebglFluid(document.querySelector('canvas'), {
@@ -84,11 +39,6 @@ export default function Home() {
     }
 
     fluid()
-    
-    return () => {
-      clearInterval(caretInterval)
-      timeouts.forEach(t => clearTimeout(t))
-    }
   }, [])
 
   return <>
@@ -103,10 +53,8 @@ export default function Home() {
       <canvas width={0} height={0} className={styles.canvas} />
       <Container className={styles.container}>
         <h1 style={{fontWeight: 300, marginBottom: '-0.5rem'}}>hello! i'm</h1>
-        <Image unoptimized src="./img/gladgladius-logo.png" width={475} height={220} alt="gladgladius" />
-        <div className={styles.skills}>
-          {skill}<i className={styles.caret} style={{visibility: caret ? 'visible' : 'hidden'}}>_</i>
-        </div>
+        <Image unoptimized src="./img/gladgladius-logo.png" width={475} height={220} alt="gladgladius" className={styles.image} />
+        <Skills style={{marginTop: '4rem'}} skills={skills} />
         <div style={{marginTop: '4rem', textAlign: 'center'}}>
           <div>
             <a title="gladiusglad" className={`${styles.contact} ${styles.icon}`} href="https://github.com/gladiusglad" target="__blank">
