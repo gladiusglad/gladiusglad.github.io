@@ -84,7 +84,7 @@ export default function Home() {
         First with <a href="https://scratch.mit.edu/">Scratch</a>, then <em>real</em> game engines such as GameMaker and Unity.
         But I also dipped my toes in website-making - I'd steal some HTML by Inspect Element-ing websites and restyle it with my own CSS.
         My first deep dive, though, was not until 2020 when I wrote a website for a Minecraft server.
-        It was at that moment that I found my true passion - <strike>stealing code</strike> web development.
+        It was at that moment that I found my true passion - <s>stealing code</s> web development.
         I've been coding ever since!
       </p>
     </Section>
