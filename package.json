@@ -9,13 +9,24 @@
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@tippyjs/react": "^4.2.5",
+    "luxon": "^1.26.0",
     "next": "10.0.6",
     "react": "17.0.1",
+    "react-awesome-reveal": "^3.7.1",
     "react-dom": "17.0.1",
     "sass": "^1.32.6",
+    "tippy.js": "^6.3.1",
     "webgl-fluid": "0.0.4"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "gh-pages": "^3.1.0",
+    "typescript": "^4.2.3"
   }
 }

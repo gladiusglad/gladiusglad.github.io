@@ -1,5 +1,7 @@
 import Head from 'next/head'
+
 import '../styles/global.scss'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 function MyApp({ Component, pageProps }) {
   return <>

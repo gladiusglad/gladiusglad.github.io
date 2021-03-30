@@ -1,0 +1,38 @@
+@use '/styles/variables' as *;
+
+.section {
+  width: 100%;
+  background-color: $dark-gray;
+  min-height: 20rem;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  
+  *:not(.backTitle) {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.backTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 6rem;
+  font-weight: 100;
+  margin-top: -0.5em;
+  color: $black;
+  user-select: none;
+  
+  .bold {
+    font-weight: 700;
+  }
+  
+  @media (min-width: $md) {
+    font-size: 8rem;
+  }
+  
+  @media (min-width: $xl) {
+    font-size: 12rem;
+  }
+}
