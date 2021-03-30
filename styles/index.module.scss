@@ -3,7 +3,7 @@
 .canvas {
   width: 100vw;
   height: 100vh;
-  min-height: 40rem;
+  min-height: 35rem;
   max-height: 45rem;
   position: absolute;
   top: 0;
@@ -18,7 +18,7 @@
 .jumbotron {
   display: flex;
   height: 100vh;
-  min-height: 40rem;
+  min-height: 35rem;
   max-height: 45rem;
   padding: 2rem;
   flex-direction: column;
@@ -41,7 +41,7 @@
   margin-top: 4rem;
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: 'Montserrat', $font;
+  font-family: $black-font;
   color: $accent;
 
   &:before, .caret {
@@ -84,4 +84,15 @@
 
 .email {
   color: $muted;
+}
+
+.comingSoon {
+  padding: 5rem 0;
+  font-size: 2rem;
+  font-family: $serif-font;
+  text-align: center;
+
+  @media (min-width: $lg) {
+    font-size: 4rem;
+  }
 }
