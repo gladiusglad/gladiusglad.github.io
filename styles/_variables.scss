@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $text: #ddd;
 $muted: rgb(119, 125, 122);
 $light-gray: rgb(86, 90, 88);
@@ -14,3 +16,22 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
+
+$breakpoints: (
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl
+);
+
+@mixin from($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin to($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}

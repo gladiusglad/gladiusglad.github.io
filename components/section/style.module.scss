@@ -7,11 +7,6 @@
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
-  
-  *:not(.backTitle) {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 .backTitle {
@@ -28,11 +23,21 @@
     font-weight: 700;
   }
   
-  @media (min-width: $md) {
+  @include from(md) {
     font-size: 8rem;
   }
   
-  @media (min-width: $xl) {
+  @include from(xl) {
     font-size: 12rem;
   }
+}
+
+.backTitleFade {
+  position: absolute;
+  top: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
 }

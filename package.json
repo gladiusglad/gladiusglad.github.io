@@ -21,7 +21,7 @@
     "react-dom": "17.0.1",
     "sass": "^1.32.6",
     "tippy.js": "^6.3.1",
-    "webgl-fluid": "0.0.4"
+    "webgl-fluid": "file:../webgl-fluid"
   },
   "devDependencies": {
     "@types/node": "^14.14.37",

@@ -6,16 +6,16 @@
   margin-left: auto;
   padding: 0 15px;
 
-  @media (min-width: $sm) {
+  @include from(sm) {
     max-width: 540px;
   }
-  @media (min-width: $md) {
+  @include from(md) {
     max-width: 720px;
   }
-  @media (min-width: $lg) {
+  @include from(lg) {
     max-width: 960px;
   }
-  @media (min-width: $xl) {
+  @include from(xl) {
     max-width: 1140px;
   }
 }

@@ -1,10 +1,14 @@
 @use './variables' as *;
 
+$jumbo-height: 90vh;
+$jumbo-min-height: 35rem;
+$jumbo-max-height: 52rem;
+
 .canvas {
   width: 100vw;
-  height: 100vh;
-  min-height: 35rem;
-  max-height: 45rem;
+  height: $jumbo-height;
+  min-height: $jumbo-min-height;
+  max-height: $jumbo-max-height;
   position: absolute;
   top: 0;
   left: 0;
@@ -17,9 +21,9 @@
 
 .jumbotron {
   display: flex;
-  height: 100vh;
-  min-height: 35rem;
-  max-height: 45rem;
+  height: $jumbo-height;
+  min-height: $jumbo-min-height;
+  max-height: $jumbo-max-height;
   padding: 2rem;
   flex-direction: column;
   align-items: center;
@@ -48,7 +52,7 @@
     color: $accent;
   }
 
-  @media (min-width: $md) {
+  @include from(md) {
     font-size: 1.5rem;
   }
 }
@@ -56,7 +60,7 @@
 .icon {
   font-size: 2.5rem;
 
-  @media (min-width: $md) {
+  @include from(md) {
     font-size: 2.8rem;
   }
 }
@@ -71,7 +75,7 @@
   font-family: $serif-font;
   text-align: center;
 
-  @media (min-width: $lg) {
+  @include from(lg) {
     font-size: 4rem;
   }
 }

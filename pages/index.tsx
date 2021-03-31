@@ -34,7 +34,7 @@ export default function Home() {
       const WebglFluid = (await import('webgl-fluid')).default
       WebglFluid(document.querySelector('canvas'), {
         BLOOM: false,
-        SUNRAYS: false
+        SPLAT_INTERVAL: 12000
       })
     }
 
