@@ -6,7 +6,7 @@ import { keyframes } from "@emotion/react"
 import styles from './style.module.scss'
 
 const backTitleStartLength = 2,
-  backTitleEndRepeat = 3;
+  backTitleEndRepeat = 5;
 
 const backTitleKeyframes = keyframes`
   from {
