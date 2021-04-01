@@ -9,11 +9,11 @@ function MyApp({ Component, pageProps }) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="./favicon.ico" type="image/x-icon" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://frozendev.tk/" />
-      <meta property="og:site_name" content="FrozenDev" />
+      <meta property="og:url" content="https://gladiusglad.github.io/" />
+      <meta property="og:site_name" content="gladgladius" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:domain" content="frozendev.tk" />
-      <meta name="theme-color" content="#4de0af" />
+      <meta name="twitter:domain" content="gladiusglad.github.io" />
+      <meta name="theme-color" content="#2eb185" />
     </Head>
     <Component {...pageProps} />
   </>
