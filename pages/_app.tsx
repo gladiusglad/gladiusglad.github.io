@@ -14,11 +14,11 @@ function MyApp({ Component, pageProps }) {
       <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://gladiusglad.github.io/" />
-      <meta property="og:image" content="https://gladiusglad.github.io/img/gladgladius-banner.png" />
+      <meta property="og:image" content="https://gladiusglad.github.io/img/gladgladius-banner.jpg" />
       <meta property="og:site_name" content="gladgladius" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="gladiusglad.github.io" />
-      <meta name="twitter:image" content="https://gladiusglad.github.io/img/gladgladius-banner.png" />
+      <meta name="twitter:image" content="https://gladiusglad.github.io/img/gladgladius-banner.jpg" />
       <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png" />
       <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png" />
