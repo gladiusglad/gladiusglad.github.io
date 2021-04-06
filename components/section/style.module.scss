@@ -13,17 +13,18 @@
 
     .backTitle {
       color: $dark-gray;
+      right: -0.3em;
+      left: auto;
     }
   }
 }
 
 .backTitle {
   position: absolute;
-  top: 0;
+  top: -0.55em;
   left: -0.3em;
   font-size: 6rem;
   font-weight: 100;
-  margin-top: -0.5em;
   color: $black;
   user-select: none;
   
@@ -43,6 +44,8 @@
 .backTitleFade {
   position: absolute;
   top: 0;
+  right: 0;
+  left: 0;
 }
 
 .container {
