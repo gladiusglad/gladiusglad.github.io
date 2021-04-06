@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import useSystemTheme from 'react-use-system-theme'
 
 function MyApp({ Component, pageProps }) {
-  const theme = useSystemTheme('dark')
+  const theme = useSystemTheme()
   const faviconSuffix = theme ? `-${theme}` : ''
 
   return <>
