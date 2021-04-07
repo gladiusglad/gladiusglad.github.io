@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </Container>
     </div>
-    <Section title="About">
+    <Section title="about">
       <p>
         Hello! I'm GladGladius. I'm a new developer currently dabbling in React, Next.js, and more.
         Although still a <em>couple</em> years away from a computer science degree, I'm pursuing <i>web development</i> - mostly front-end.
