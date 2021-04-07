@@ -1,0 +1,78 @@
+@use '/styles/variables' as *;
+
+$backtitle-dist: -1.2em;
+$backtitle-hover-dist: -0.8em;
+
+.anchor {
+  text-decoration: none !important;
+}
+
+.project {
+  width: 100%;
+  background-color: $gray;
+  padding: 4rem;
+  margin: 3rem 0;
+  position: relative; 
+  overflow: hidden;
+  transition: filter .15s ease-out;
+
+  &:hover {
+    filter: brightness(1.1);
+    .backTitle {
+      left: $backtitle-hover-dist;
+      opacity: 1;
+    }
+  }
+}
+
+.right {
+  text-align: right;
+
+  .backTitle {
+    right: $backtitle-dist;
+  }
+
+  &:hover {
+    .backTitle {
+      left: auto;
+      right: $backtitle-hover-dist;
+    }
+  }
+}
+
+.black {
+  color: $black;
+}
+
+.backTitle {
+  font-size: 5rem;
+  opacity: 0.4;
+  left: $backtitle-dist;
+  color: $dark-gray;
+  transition: all .15s ease-out;
+
+  @include from(md) {
+    font-size: 7rem;
+  }
+  
+  @include from(xl) {
+    font-size: 9rem;
+  }
+}
+
+.title, .desc {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+
+  @include from(md) {
+    font-size: 5rem;
+  }
+}
+
+.desc {
+  font-family: $black-font;
+}

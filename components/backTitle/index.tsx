@@ -8,13 +8,15 @@ import styles from './style.module.scss'
 
 interface BackTitleProps {
   title: string,
+  style?: React.CSSProperties,
+  className?: string,
   right?: boolean,
   startLength?: number,
   endRepeat?: number,
   noAnim?: boolean
 }
 
-export default function BackTitle({title, right, startLength = 2, endRepeat = 5, noAnim}: BackTitleProps) {
+export default function BackTitle({title, style, className, right, startLength = 2, endRepeat = 5, noAnim}: BackTitleProps) {
   const backTitle = title.toLowerCase().replace(/\s/g, ''),
     backTitleStart = right ?
       backTitle.substring(0, startLength) :
@@ -32,7 +34,7 @@ export default function BackTitle({title, right, startLength = 2, endRepeat = 5,
     `
 
   const h1 = (
-    <h1 className={c(styles.backTitle, [right, styles.right])}>
+    <h1 className={c(styles.backTitle, [right, styles.right], className)} style={style}>
       {right ? backTitleEnd : backTitleStart}
       <span className={styles.bold}>{backTitle}</span>
       {right ? backTitleStart : backTitleEnd}

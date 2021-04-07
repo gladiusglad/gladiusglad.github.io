@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Section from '../components/section'
 import Container from '../components/container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons'
+import Skills from '../components/skills'
+import Project from '../components/project'
 
 import styles from '../styles/index.module.scss'
-import Skills from '../components/skills'
 
 const title = 'gladgladius',
   description = 'hello! i\'m a new developer currently dabbling in react, java, and more. learn more about me!',
@@ -87,6 +88,26 @@ export default function Home() {
         It was at that moment that I found my true passion - <s>stealing code</s> web development.
         I've been coding ever since!
       </p>
+    </Section>
+    <Section title="projects" black>
+      <Project
+        title="calcula"
+        desc="Mathematical expression parsers and calculators, currently available in .NET Console and WPF"
+        link="https://github.com/gladiusglad/calcula-core"
+        background="#085f75"
+        backTitle="#0e9c78"/>
+      <Project
+        title="avallion"
+        desc="A Minecraft Survival server focused on community"
+        link="https://avallion.net"
+        background="#14424E"
+        backTitle="#a19f13"
+        right/>
+      <Project
+        title="gladiusglad"
+        desc="My lovely little website"
+        link="https://gladiusglad.github.io"
+        backTitle="#127856"/>
     </Section>
     <Container className={styles.comingSoon}>
       more coming soon™!
