@@ -10,42 +10,7 @@
 
   &.black {
     background-color: $black;
-
-    .backTitle {
-      color: $dark-gray;
-      right: -0.3em;
-      left: auto;
-    }
   }
-}
-
-.backTitle {
-  position: absolute;
-  top: -0.55em;
-  left: -0.3em;
-  font-size: 6rem;
-  font-weight: 100;
-  color: $black;
-  user-select: none;
-  
-  .bold {
-    font-weight: 700;
-  }
-  
-  @include from(md) {
-    font-size: 8rem;
-  }
-  
-  @include from(xl) {
-    font-size: 12rem;
-  }
-}
-
-.backTitleFade {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
 }
 
 .container {
