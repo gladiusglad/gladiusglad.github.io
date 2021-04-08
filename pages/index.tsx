@@ -29,18 +29,21 @@ const title = 'gladgladius',
   ]
 
 export default function Home() {
+  const dev = process.env.NODE_ENV === 'development'
 
-  useEffect(() => {
-    const fluid = async () => {
-      const WebglFluid = (await import('webgl-fluid')).default
-      WebglFluid(document.querySelector('canvas'), {
-        BLOOM: false,
-        SPLAT_INTERVAL: 12000
-      })
-    }
-
-    fluid()
-  }, [])
+  if (!dev) {
+    useEffect(() => {
+      const fluid = async () => {
+        const WebglFluid = (await import('webgl-fluid')).default
+        WebglFluid(document.querySelector('canvas'), {
+          BLOOM: false,
+          SPLAT_INTERVAL: 12000
+        })
+      }
+  
+      fluid()
+    }, [])
+  }
 
   return <>
     <Head>
@@ -51,7 +54,7 @@ export default function Home() {
       <meta name="twitter:title" content={title} />
     </Head>
     <div className={styles.jumbotron}>
-      <canvas width={0} height={0} className={styles.canvas} />
+      {!dev && <canvas width={0} height={0} className={styles.canvas} />}
       <Container className={styles.container}>
         <h1 style={{fontWeight: 300, marginBottom: '-0.5rem'}}>hello! i'm</h1>
         <Image unoptimized src="./img/gladgladius-logo.png" width={475} height={220} alt="gladgladius" className={styles.image} />
