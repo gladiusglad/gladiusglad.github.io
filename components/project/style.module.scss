@@ -2,6 +2,9 @@
 
 $backtitle-dist: -4em;
 $backtitle-hover-dist: -3.6em;
+$project-margin-md: -5rem;
+$project-margin-lg: -8rem;
+$project-margin-xl: -12rem;
 
 .wrapper {
   display: flex;
@@ -22,7 +25,7 @@ $backtitle-hover-dist: -3.6em;
   &:hover, &:focus {
     box-shadow: none !important;
     filter: brightness(1.1);
-    width: 100%;
+    width: 120%;
 
     .backTitle {
       opacity: 1;
@@ -37,10 +40,35 @@ $backtitle-hover-dist: -3.6em;
       }
     }
   }
+
+  @include from(md) {
+    margin-left: $project-margin-md;
+  }
+
+  @include from(lg) {
+    margin-left: $project-margin-lg;
+  }
+
+  @include from(xl) {
+    margin-left: $project-margin-xl;
+  }
 }
 
 .right {
   text-align: right;
+  margin-left: 0;
+
+  @include from(md) {
+    margin-right: $project-margin-md;
+  }
+
+  @include from(lg) {
+    margin-right: $project-margin-lg;
+  }
+
+  @include from(xl) {
+    margin-right: $project-margin-xl;
+  }
 
   .backTitle {
     right: $backtitle-dist;
