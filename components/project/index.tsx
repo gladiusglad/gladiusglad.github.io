@@ -32,7 +32,7 @@ export default function Project({title, desc, background, backTitle, img, link, 
               <BackTitle title={title} startLength={10} right={right} className={styles.backTitle} style={{color: backTitle}} noAnim />
               {img && 
                 <div className={styles.img}>
-                  <Image src={img} width={512} height={512} unoptimized />
+                  <Image src={img} width={480} height={480} unoptimized />
                 </div>}
               <h1 className={styles.title}>{title}</h1>
               <p className={styles.desc}>{desc}</p>

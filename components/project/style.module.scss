@@ -30,7 +30,7 @@ $backtitle-hover-dist: -3.6em;
     }
     
     .img {
-      top: -1rem;
+      top: -2.5rem;
 
       @include to(lg) {
         top: 3rem;
@@ -90,7 +90,7 @@ $backtitle-hover-dist: -3.6em;
 
 .img {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: -5rem;
   transition: all .15s ease-out;
 
