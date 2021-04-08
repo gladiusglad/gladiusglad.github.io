@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+
+.heading:hover .anchor {
+  opacity: 1;
+}
+
+.anchor {
+  width: 1em;
+  margin-left: -1.5em;
+  padding-right: 0.5em;
+  vertical-align: middle;
+  color: $dark-accent;
+  font-size: 0.5em;
+  opacity: 0;
+  transition: all .1s;
+
+  &:hover, &:focus {
+    color: $accent;
+    opacity: 1;
+  }
+
+  @include to(md) {
+    display: none;
+  }
+}
