@@ -56,7 +56,7 @@ export default function Home() {
     <div className={styles.jumbotron}>
       {!dev && <canvas width={0} height={0} className={styles.canvas} />}
       <Container className={styles.container}>
-        <h1 style={{fontWeight: 300, marginBottom: '-0.5rem'}}>hello! i'm</h1>
+        <div className={styles.hello}>hello! i'm</div>
         <Image unoptimized src="./img/gladgladius-logo.png" width={475} height={220} alt="gladgladius" className={styles.image} />
         <Skills style={{marginTop: '4rem'}} skills={skills} />
         <div style={{marginTop: '4rem', textAlign: 'center'}}>

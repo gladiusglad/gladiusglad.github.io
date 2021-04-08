@@ -52,18 +52,18 @@ export default function BackTitle({title, style, className, right, startLength =
       }
     `
 
-  const h1 = (
-    <h1 className={c(styles.backTitle, [right, styles.right], className)} style={style}>
+  const content = (
+    <div className={c(styles.backTitle, [right, styles.right], className)} style={style}>
       {right ? backTitleEnd : backTitleStart}
       <span className={styles.bold}>{backTitle}</span>
       {right ? backTitleStart : backTitleEnd}
-    </h1>
+    </div>
   )
 
   return <>
-    {noAnim ? h1 :
+    {noAnim ? content :
       <Fade keyframes={backTitleKeyframes} className={styles.backTitleFade} duration={2000} >
-        {h1}
+        {content}
       </Fade>
     }
   </>

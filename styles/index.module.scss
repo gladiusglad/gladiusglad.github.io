@@ -19,6 +19,17 @@ $jumbo-max-height: 52rem;
   width: 100%;
 }
 
+.hello {
+  margin-bottom: '-0.5rem';
+  font-family: $black-font;
+  font-weight: 300;
+  font-size: 2rem;
+
+  @include from(md) {
+    font-size: 3rem;
+  }
+}
+
 .jumbotron {
   display: flex;
   height: $jumbo-height;
