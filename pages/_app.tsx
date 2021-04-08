@@ -1,3 +1,5 @@
+import React from 'react'
+import Footer from '../components/footer'
 import Head from 'next/head'
 
 import '../styles/global.scss'
@@ -39,6 +41,7 @@ function MyApp({ Component, pageProps }) {
       <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
     </Head>
     <Component {...pageProps} />
+    <Footer />
   </>
 }
 

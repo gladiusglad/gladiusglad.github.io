@@ -1,0 +1,21 @@
+@use '/styles/variables' as *;
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 4rem;
+  background-color: $dark-gray;
+  overflow: hidden;
+}
+
+.fin {
+  position: absolute;
+  bottom: -0.45em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: $black-font;
+  font-size: 6rem;
+  font-weight: 700;
+  color: $black;
+  user-select: none;
+}
