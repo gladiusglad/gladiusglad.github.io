@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../container'
-import BackTitle from '../backTitle'
+import BackTitle from '../back-title'
 import Heading from './../anchor-heading'
 
 import c from '../../lib/className'

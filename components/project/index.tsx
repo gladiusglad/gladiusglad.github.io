@@ -1,6 +1,6 @@
 import React from 'react'
 import { Slide } from 'react-awesome-reveal'
-import BackTitle from '../backTitle'
+import BackTitle from '../back-title'
 import Container from '../container'
 
 import styles from './style.module.scss'
