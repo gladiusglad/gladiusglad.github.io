@@ -1,21 +1,48 @@
 @use '/styles/variables' as *;
 
+$width-sm: 540px;
+$width-md: 720px;
+$width-lg: 960px;
+$width-xl: 1140px;
+
 .container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 15px;
+}
 
+.padding {
+  padding: 0 15px;
+}
+
+.maxWidth {
   @include from(sm) {
-    max-width: 540px;
+    max-width: $width-sm;
   }
   @include from(md) {
-    max-width: 720px;
+    max-width: $width-md;
   }
   @include from(lg) {
-    max-width: 960px;
+    max-width: $width-lg;
   }
   @include from(xl) {
-    max-width: 1140px;
+    max-width: $width-xl;
+  }
+}
+
+.width {
+  width: 100%;
+  
+  @include from(sm) {
+    width: $width-sm;
+  }
+  @include from(md) {
+    width: $width-md;
+  }
+  @include from(lg) {
+    width: $width-lg;
+  }
+  @include from(xl) {
+    width: $width-xl;
   }
 }

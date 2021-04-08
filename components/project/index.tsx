@@ -1,10 +1,13 @@
 import React from 'react'
 import { Slide } from 'react-awesome-reveal'
+import BackTitle from '../backTitle'
+import Container from '../container'
 
 import styles from './style.module.scss'
+import containerStyles from '../container/style.module.scss'
 
 import c from '../../lib/className'
-import BackTitle from '../backTitle'
+import Image from 'next/image'
 
 interface ProjectProps {
   title: string,
@@ -20,13 +23,22 @@ interface ProjectProps {
 export default function Project({title, desc, background, backTitle, img, link, black, right}: ProjectProps) {
   return (
     <Slide triggerOnce direction={right ? 'right' : 'left'}>
-      <a className={styles.anchor} href={link}>
-        <div className={c(styles.project, [right, styles.right], [black, styles.black])} style={{backgroundColor: background}}>
-          <BackTitle title={title} startLength={4} right={right} className={styles.backTitle} style={{color: backTitle}} noAnim />
-          <h1 className={styles.title}>{title}</h1>
-          <p className={styles.desc}>{desc}</p>
+        <div className={styles.wrapper}>
+          <a
+            className={c(styles.project, containerStyles.width, [right, styles.right], [black, styles.black])}
+            style={{backgroundColor: background}}
+            href={link}>
+            <Container className={styles.content}>
+              <BackTitle title={title} startLength={10} right={right} className={styles.backTitle} style={{color: backTitle}} noAnim />
+              {img && 
+                <div className={styles.img}>
+                  <Image src={img} width={512} height={512} unoptimized />
+                </div>}
+              <h1 className={styles.title}>{title}</h1>
+              <p className={styles.desc}>{desc}</p>
+            </Container>
+          </a>
         </div>
-      </a>
     </Slide>
   )
 }

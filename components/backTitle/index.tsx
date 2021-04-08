@@ -16,11 +16,30 @@ interface BackTitleProps {
   noAnim?: boolean
 }
 
+const stringInLength = (str: string, length: number, reverse?: boolean) => {
+  if (length === str.length) {
+    return str
+  } else if (length < str.length) {
+    if (reverse) {
+      return str.substring(str.length - length)
+    } else {
+      return str.substring(0, length)
+    }
+  } else {
+    const repeat = str.repeat(~~(length / str.length)),
+      remainder = length % str.length
+
+    if (reverse) {
+      return str.substring(str.length - remainder) + repeat
+    } else {
+      return repeat + str.substring(0, remainder)
+    }
+  }
+}
+
 export default function BackTitle({title, style, className, right, startLength = 2, endRepeat = 5, noAnim}: BackTitleProps) {
   const backTitle = title.toLowerCase().replace(/\s/g, ''),
-    backTitleStart = right ?
-      backTitle.substring(0, startLength) :
-      backTitle.substring(backTitle.length - startLength),
+    backTitleStart = stringInLength(backTitle, startLength, !right),
     backTitleEnd = backTitle.repeat(endRepeat),
     backTitleKeyframes = keyframes`
       from {

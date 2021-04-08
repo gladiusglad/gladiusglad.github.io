@@ -89,17 +89,20 @@ export default function Home() {
         I've been coding ever since!
       </p>
     </Section>
-    <Section title="projects" black>
+    <Section title="projects" containerWidth="100%" black>
       <Project
         title="calcula"
         desc="Mathematical expression parsers and calculators, currently available in .NET Console and WPF"
         link="https://github.com/gladiusglad/calcula-core"
+        img="/img/calcula-logo.png"
         background="#085f75"
-        backTitle="#0e9c78"/>
+        backTitle="#0e9c78"
+        black/>
       <Project
         title="avallion"
         desc="A Minecraft Survival server focused on community"
         link="https://avallion.net"
+        img="/img/avallion-logo.png"
         background="#14424E"
         backTitle="#a19f13"
         right/>
@@ -107,6 +110,7 @@ export default function Home() {
         title="gladiusglad"
         desc="My lovely little website"
         link="https://gladiusglad.github.io"
+        img="/img/gladgladius-logo-small-display.png"
         backTitle="#127856"/>
     </Section>
     <Container className={styles.comingSoon}>

@@ -1,26 +1,40 @@
 @use '/styles/variables' as *;
 
-$backtitle-dist: -1.2em;
-$backtitle-hover-dist: -0.8em;
+$backtitle-dist: -4em;
+$backtitle-hover-dist: -3.6em;
 
-.anchor {
-  text-decoration: none !important;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .project {
-  width: 100%;
+  display: block;
   background-color: $gray;
-  padding: 4rem;
-  margin: 3rem 0;
   position: relative; 
   overflow: hidden;
-  transition: filter .15s ease-out;
+  text-decoration: none !important;
+  transition: all .15s ease-out !important;
 
-  &:hover {
+  &:hover, &:focus {
+    box-shadow: none !important;
     filter: brightness(1.1);
+    width: 100%;
+
     .backTitle {
-      left: $backtitle-hover-dist;
       opacity: 1;
+      left: $backtitle-hover-dist;
+    }
+    
+    .img {
+      top: -1rem;
+
+      @include to(lg) {
+        top: 3rem;
+      }
     }
   }
 }
@@ -32,16 +46,30 @@ $backtitle-hover-dist: -0.8em;
     right: $backtitle-dist;
   }
 
-  &:hover {
+  .img {
+    right: auto;
+    left: -5rem;
+  }
+
+  &:hover, &:focus {
     .backTitle {
       left: auto;
       right: $backtitle-hover-dist;
     }
   }
+
+  .title, .desc {
+    margin-left: auto;
+  }
 }
 
 .black {
   color: $black;
+}
+
+.content {
+  position: relative;
+  padding: 4rem !important;
 }
 
 .backTitle {
@@ -60,6 +88,19 @@ $backtitle-hover-dist: -0.8em;
   }
 }
 
+.img {
+  position: absolute;
+  top: 2rem;
+  right: -5rem;
+  transition: all .15s ease-out;
+
+  @include to(lg) {
+    top: 5rem;
+    width: 256px;
+    height: 256px;
+  }
+}
+
 .title, .desc {
   position: relative;
   z-index: 2;
@@ -74,5 +115,10 @@ $backtitle-hover-dist: -0.8em;
 }
 
 .desc {
-  font-family: $black-font;
+  max-width: 75%;
+  font-size: 1.2rem;
+
+  @include from(md) {
+    font-size: 2rem;
+  }
 }
