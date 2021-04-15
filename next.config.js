@@ -4,5 +4,5 @@ module.exports = {
   images: {
     loader: 'imgix'
   },
-  assetPrefix: "./"
+  trailingSlash: true
 }
