@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import Section from '../components/section'
 import Container from '../components/container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -74,23 +75,8 @@ export default function Home() {
         </div>
       </Container>
     </div>
-    <Section title="about">
-      <p>
-        Hello! I'm GladGladius. I'm a new developer currently dabbling in React, Next.js, and more.
-        Although still a <em>couple</em> years away from a computer science degree, I'm pursuing <i>web development</i> - mostly front-end.
-      </p>
-      <p>
-        I'm proficient in React, <a href="https://nextjs.org/">Next.js</a>, and TypeScript.
-        I'm also experienced in MySQL, MongoDB, Java, and C#. Besides coding, I can do some graphic design and video editing too.
-      </p>
-      <p>
-        I love coding. I've been doing it since I was 8! As any other self-respecting nerdy preteen, I started with coding simple games.
-        First with <a href="https://scratch.mit.edu/">Scratch</a>, then <em>real</em> game engines such as GameMaker and Unity.
-        But I also dipped my toes in website-making - I'd steal some HTML by Inspect Element-ing websites and restyle it with my own CSS.
-        My first deep dive, though, was not until 2020 when I wrote a website for a Minecraft server.
-        It was at that moment that I found my true passion - <s>stealing code</s> web development.
-        I've been coding ever since!
-      </p>
+    <Section title="blog">
+      <p><Link href="/test/">Test</Link></p>
     </Section>
     <Section title="projects" containerWidth="100%" black>
       <Project
@@ -115,6 +101,24 @@ export default function Home() {
         link="https://gladiusglad.github.io"
         img="/img/gladgladius-logo-small-display.png"
         backTitle="#127856"/>
+    </Section>
+    <Section title="about">
+      <p>
+        Hello! I'm GladGladius. I'm a new developer currently dabbling in React, Next.js, and more.
+        Although still a <em>couple</em> years away from a computer science degree, I'm pursuing <i>web development</i> - mostly front-end.
+      </p>
+      <p>
+        I'm proficient in React, <a href="https://nextjs.org/">Next.js</a>, and TypeScript.
+        I'm also experienced in MySQL, MongoDB, Java, and C#. Besides coding, I can do some graphic design and video editing too.
+      </p>
+      <p>
+        I love coding. I've been doing it since I was 8! As any other self-respecting nerdy preteen, I started with coding simple games.
+        First with <a href="https://scratch.mit.edu/">Scratch</a>, then <em>real</em> game engines such as GameMaker and Unity.
+        But I also dipped my toes in website-making - I'd steal some HTML by Inspect Element-ing websites and restyle it with my own CSS.
+        My first deep dive, though, was not until 2020 when I wrote a website for a Minecraft server.
+        It was at that moment that I found my true passion - <s>stealing code</s> web development.
+        I've been coding ever since!
+      </p>
     </Section>
     <Container className={styles.comingSoon}>
       more coming soon™!
