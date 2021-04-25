@@ -111,14 +111,6 @@ export default function Home() {
         I'm proficient in React, <a href="https://nextjs.org/">Next.js</a>, and TypeScript.
         I'm also experienced in MySQL, MongoDB, Java, and C#. Besides coding, I can do some graphic design and video editing too.
       </p>
-      <p>
-        I love coding. I've been doing it since I was 8! As any other self-respecting nerdy preteen, I started with coding simple games.
-        First with <a href="https://scratch.mit.edu/">Scratch</a>, then <em>real</em> game engines such as GameMaker and Unity.
-        But I also dipped my toes in website-making - I'd steal some HTML by Inspect Element-ing websites and restyle it with my own CSS.
-        My first deep dive, though, was not until 2020 when I wrote a website for a Minecraft server.
-        It was at that moment that I found my true passion - <s>stealing code</s> web development.
-        I've been coding ever since!
-      </p>
     </Section>
     <Container className={styles.comingSoon}>
       more coming soon™!
