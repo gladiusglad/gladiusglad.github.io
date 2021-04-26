@@ -76,7 +76,7 @@ export default function Home() {
       </Container>
     </div>
     <Section title="blog">
-      <p><Link href="/test/">Test</Link></p>
+      <p><Link href="/blog/test">Test</Link></p>
     </Section>
     <Section title="projects" containerWidth="100%" black>
       <Project

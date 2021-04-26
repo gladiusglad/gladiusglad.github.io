@@ -1,10 +1,23 @@
 import React from 'react'
 import Footer from '../components/footer'
 import Head from 'next/head'
+import {MDXProvider} from '@mdx-js/react'
+import Blog from '../components/blog'
+import Heading from '../components/anchor-heading'
 
 import '../styles/global.scss'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import useSystemTheme from 'react-use-system-theme'
+
+const mdxComponents = {
+  wrapper: props => <Blog {...props} />,
+  h1: props => <Heading level={1} {...props} />,
+  h2: props => <Heading level={2} {...props} />,
+  h3: props => <Heading level={3} {...props} />,
+  h4: props => <Heading level={4} {...props} />,
+  h5: props => <Heading level={5} {...props} />,
+  h6: props => <Heading level={6} {...props} />
+}
 
 function MyApp({ Component, pageProps }) {
   const theme = useSystemTheme()
@@ -40,7 +53,9 @@ function MyApp({ Component, pageProps }) {
       <meta name="theme-color" content="#2eb185" />
       <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
     </Head>
-    <Component {...pageProps} />
+    <MDXProvider components={mdxComponents}>
+      <Component {...pageProps} />
+    </MDXProvider>
     <Footer />
   </>
 }

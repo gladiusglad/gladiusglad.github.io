@@ -1,8 +1,9 @@
-const path = require('path')
+const withMDX = require('@next/mdx')()
 
-module.exports = {
+module.exports = withMDX({
   images: {
     loader: 'imgix'
   },
-  trailingSlash: true
-}
+  trailingSlash: true,
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+})
