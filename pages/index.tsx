@@ -78,15 +78,14 @@ export default function Home() {
     <Section title="blog">
       <p><Link href="/blog/test">Test</Link></p>
     </Section>
-    <Section title="projects" containerWidth="100%" black>
+    <Section title="projects" containerWidth="100%" black noContent>
       <Project
         title="calcula"
         desc="Mathematical expression parsers and calculators, currently available in .NET Console and WPF"
         link="https://github.com/gladiusglad/calcula-core"
         img="/img/calcula-logo.png"
         background="#085f75"
-        backTitle="#0e9c78"
-        black/>
+        backTitle="#0e9c78"/>
       <Project
         title="avallion"
         desc="A Minecraft Survival server focused on community"
