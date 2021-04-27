@@ -1,8 +1,8 @@
 @use './variables' as *;
 
-$jumbo-height: 90vh;
-$jumbo-min-height: 35rem;
-$jumbo-max-height: 52rem;
+$jumbo-height: 80vh;
+$jumbo-min-height: 32rem;
+$jumbo-max-height: 45rem;
 
 .canvas {
   width: 100vw;
@@ -49,6 +49,35 @@ $jumbo-max-height: 52rem;
 
   *:not(.container) {
     z-index: 1;
+  }
+}
+
+.info {
+  position: relative;
+  width: 100%;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include to(md) {
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+}
+
+.infoLeft {
+  @include to(md) {
+    float: left;
+    margin-bottom: 2rem;
+  }
+}
+
+.infoRight {
+  text-align: right;
+
+  @include to(md) {
+    text-align: center;
   }
 }
 

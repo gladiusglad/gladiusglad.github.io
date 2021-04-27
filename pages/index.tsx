@@ -59,18 +59,20 @@ export default function Home() {
       <Container className={styles.container}>
         <div className={styles.hello}>hello! i'm</div>
         <Image unoptimized src="./img/gladgladius-logo.png" width={475} height={220} alt="gladgladius" className={styles.image} />
-        <Skills style={{marginTop: '4rem'}} skills={skills} />
-        <div style={{marginTop: '4rem', textAlign: 'center'}}>
-          <div>
-            <a title="gladiusglad" className={`${styles.contact} ${styles.icon}`} href="https://github.com/gladiusglad" target="__blank">
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a title="glad#2095" className={`${styles.contact} ${styles.icon}`} href="https://discord.com/users/443441102805270528" target="__blank">
-              <FontAwesomeIcon icon={faDiscord} />
-            </a>
-          </div>
-          <div style={{marginTop: 5}}>
-            <a className={`${styles.contact} ${styles.email}`} href="mailto:defoverthought@gmail.com">defoverthought@gmail.com</a>
+        <div className={styles.info}>
+          <Skills className={styles.infoLeft} skills={skills} />
+          <div className={styles.infoRight}>
+            <div>
+              <a title="gladiusglad" className={`${styles.contact} ${styles.icon}`} href="https://github.com/gladiusglad" target="__blank">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <a title="glad#2095" className={`${styles.contact} ${styles.icon}`} href="https://discord.com/users/443441102805270528" target="__blank">
+                <FontAwesomeIcon icon={faDiscord} />
+              </a>
+            </div>
+            <div style={{marginTop: 5}}>
+              <a className={`${styles.contact} ${styles.email}`} href="mailto:defoverthought@gmail.com">defoverthought@gmail.com</a>
+            </div>
           </div>
         </div>
       </Container>

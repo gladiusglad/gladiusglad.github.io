@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import styles from './style.module.scss'
 
+import c from '../../lib/className'
+
 export default function Skills({skills, ...props}: {skills: string[]} & React.HTMLAttributes<HTMLDivElement>) {
   let typing, skillIndex = 0, currentLength = 0
   const timeouts = []
@@ -58,7 +60,7 @@ export default function Skills({skills, ...props}: {skills: string[]} & React.HT
   }, [])
 
   return (
-    <div className={styles.skills} {...props}>
+    <div {...props} className={c(styles.skills, props.className)}>
       {skill}<i className={styles.caret} style={{visibility: caret ? 'visible' : 'hidden'}}>_</i>
     </div>
   )

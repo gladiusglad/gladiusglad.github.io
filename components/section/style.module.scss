@@ -4,12 +4,16 @@
   width: 100%;
   background-color: $dark-gray;
   min-height: 20rem;
-  padding: 4rem 0;
+  padding: 2rem 0;
   position: relative;
   overflow: hidden;
 
   &.black {
     background-color: $black;
+  }
+
+  @include from(md) {
+    padding: 4rem 0;
   }
 }
 
